@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/backend/(.*)", "destination": "/api" },
-    { "source": "/traverl-site/(.*)", "destination": "/index.html" }
-  ]
-}
