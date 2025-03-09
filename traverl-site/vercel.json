@@ -1,26 +1,6 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "travel-site/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    },
-    {
-      "src": "backend/api/**/*.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/travel-site/$1"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/backend/api/$1.js"
-    }
+  "rewrites": [
+    { "source": "/backend/(.*)", "destination": "/api" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
